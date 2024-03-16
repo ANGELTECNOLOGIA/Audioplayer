@@ -7,6 +7,8 @@ const current_time = document.getElementById("current_time");
 const current_audio = document.getElementById("current_audio");
 const progressContainer = document.querySelector(".progress_container");
 const progress = document.getElementById("progress");
+const back10 = document.getElementById("back10");
+const plus10 = document.getElementById("plus10");
 
 const songs = ["How You Get The Girl", "Skapate", "Sobreviviste"];
 
@@ -107,3 +109,11 @@ audio.addEventListener("timeupdate", (e) => {
 progressContainer.addEventListener("click", setProgress);
 prev.addEventListener("click", prevSong);
 next.addEventListener("click", nextSong);
+
+plus10.addEventListener('click', ()=>{
+    audio.currentTime +=10;
+})
+
+back10.addEventListener('click', ()=>{
+    audio.currentTime -=10;
+})
